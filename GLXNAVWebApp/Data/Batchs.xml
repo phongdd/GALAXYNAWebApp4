@@ -1,0 +1,83 @@
+﻿<Batches>
+	<batch>
+		<Code>BMT</Code>
+		<Name>Buôn Ma Thuột</Name>
+
+	</batch>
+	<batch>
+		<Code>BTR</Code>
+		<Name>Bến Tre</Name>
+	</batch>
+	<batch>
+		<Code>CMA</Code>
+		<Name>Cà Mau</Name>
+
+	</batch>
+	<batch>
+		<Code>DNA</Code>
+		<Name>Đà Nẵng</Name>
+
+	</batch>
+	<batch>
+		<Code>HPH</Code>
+		<Name>Hải Phòng</Name>
+	</batch>
+	<batch>
+		<Code>HTP</Code>
+		<Name>Huỳnh Tấn Phát</Name>
+	</batch>
+
+	<batch>
+		<Code>KDV</Code>
+		<Name>Kinh Dương Vương</Name>
+	</batch>
+	<batch>
+		<Code>LTR</Code>
+		<Name>Linh Trung</Name>
+	</batch>
+	<batch>
+		<Code>LXU</Code>
+		<Name>Long Xuyên</Name>
+	</batch>
+	<batch>
+		<Code>MLB</Code>
+		<Name>Mipec Long Biên</Name>
+	</batch>
+	<batch>
+		<Code>NDU</Code>
+		<Name>Nguyễn Du</Name>
+	</batch>
+	<batch>
+		<Code>NVQ</Code>
+		<Name>Nguyễn Văn Quá</Name>
+	</batch>
+
+	<batch>
+		<Code>PVC</Code>
+		<Name>Phạm Văn Chí</Name>
+	</batch>
+	<batch>
+		<Code>QTR</Code>
+		<Name>Quang Trung</Name>
+	</batch>
+	<batch>
+		<Code>TBI</Code>
+		<Name>Tân Bình</Name>
+	</batch>
+	<batch>
+		<Code>TCH</Code>
+		<Name>Trung Chánh</Name>
+	</batch>
+	<batch>
+		<Code>TTH</Code>
+		<Name>Tràng Thi</Name>
+	</batch>
+	<batch>
+		<Code>VIN</Code>
+		<Name>Vinh</Name>
+	</batch>
+  <batch>
+    <Code>IT</Code>
+    <Name>Team IT</Name>
+  </batch>
+</Batches>

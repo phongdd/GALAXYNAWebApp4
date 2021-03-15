@@ -1,0 +1,78 @@
+﻿<Locations>
+	<location>
+		<Code>BMT-CO</Code>
+		<Name>Buôn Ma Thuột</Name>
+	</location>
+	<location>
+		<Code>BTR-CO</Code>
+		<Name>Bến Tre</Name>
+	</location>
+	<location>
+		<Code>CMA-CO</Code>
+		<Name>Cà Mau</Name>
+	</location>
+	<location>
+		<Code>DNA-CO</Code>
+		<Name>Đà Nẵng</Name>
+	</location>
+	<location>
+		<Code>HPH-CO</Code>
+		<Name>Hải Phòng</Name>
+	</location>
+	<location>
+		<Code>HTP-CO</Code>
+		<Name>Huỳnh Tấn Phát</Name>
+	</location>
+	<location>
+		<Code>KDV-CO</Code>
+		<Name>Kinh Dương Vương</Name>
+	</location>
+	<location>
+		<Code>LTR-CO</Code>
+		<Name>Linh Trung</Name>
+	</location>
+	<location>
+		<Code>LXU-CO</Code>
+		<Name>Long Xuyên</Name>
+	</location>
+	<location>
+		<Code>MLB-CO</Code>
+		<Name>Mipec Long Biên</Name>
+	</location>
+	<location>
+		<Code>NDU-CO</Code>
+		<Name>Nguyễn Du</Name>
+	</location>
+	<location>
+		<Code>NVQ-CO</Code>
+		<Name>Nguyễn Văn Quá</Name>
+	</location>
+	<location>
+		<Code>PVC-CO</Code>
+		<Name>Phạm Văn Chí</Name>
+	</location>
+	<location>
+		<Code>QTR-CO</Code>
+		<Name>Quang Trung</Name>
+	</location>
+	<location>
+		<Code>T12-CO</Code>
+		<Name>Trung Chánh</Name>
+	</location>
+	<location>
+		<Code>TBI-CO</Code>
+		<Name>Tân Bình</Name>
+	</location>
+	<location>
+		<Code>TTH-CO</Code>
+		<Name>Tràng Thi</Name>
+	</location>
+	<location>
+		<Code>VIN-CO</Code>
+		<Name>Vinh</Name>
+	</location>
+  <location>
+    <Code>HO -IT</Code>
+    <Name>Kho Head Office - IT</Name>
+  </location>
+</Locations>

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="BSL.SVC.BSL_Permissions" CodeBehind="BSL_Permissions.svc.cs" %>

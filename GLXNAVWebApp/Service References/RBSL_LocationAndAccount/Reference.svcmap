@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="991fe631-bf5c-40ff-b9bc-d1d333809a9b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:27169/SVC/BSL_LocationAndAccount.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BSL_LocationAndAccount.xsd" MetadataType="Schema" ID="0dff6049-1ab1-41ec-960c-d2aa1d066efa" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_LocationAndAccount.svc?xsd=xsd1" />
+    <MetadataFile FileName="BSL_LocationAndAccount.disco" MetadataType="Disco" ID="e8afa75a-0d7c-404e-83e2-fb2cfd5085c5" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_LocationAndAccount.svc?disco" />
+    <MetadataFile FileName="BSL_LocationAndAccount1.xsd" MetadataType="Schema" ID="04b4bd8e-ae1b-412c-9fba-bd1fb941aa83" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_LocationAndAccount.svc?xsd=xsd0" />
+    <MetadataFile FileName="BSL_LocationAndAccount.wsdl" MetadataType="Wsdl" ID="7a649401-bf9f-49fe-88d0-95de2e2a0f9e" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_LocationAndAccount.svc?wsdl" />
+    <MetadataFile FileName="BSL_LocationAndAccount2.xsd" MetadataType="Schema" ID="52cab581-d450-4615-a3ca-f363caeb8465" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_LocationAndAccount.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

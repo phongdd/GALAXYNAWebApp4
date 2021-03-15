@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="RequisitionWkshName">
+  <DataContextMoniker Name="/RequisitionWkshNameDataContext" />
+  <nestedChildShapes>
+    <classShape Id="db01f3e8-bfc1-485f-8534-df932b620f01" absoluteBounds="1.25, 1.375, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/RequisitionWkshNameDataContext/Requisition_Wksh__Name" />
+      <nestedChildShapes>
+        <elementListCompartment Id="652f6918-6dc1-4070-bea9-e8b0d8db4cda" absoluteBounds="1.2650000000000001, 1.835, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="6ba62390-69d7-4079-91fb-4956ea85da8c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:27169/SVC/BSL_Permissions.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BSL_Permissions.xsd" MetadataType="Schema" ID="42efd535-aafb-434a-8577-83436472eb9f" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_Permissions.svc?xsd=xsd0" />
+    <MetadataFile FileName="BSL_Permissions1.xsd" MetadataType="Schema" ID="a5dfbb63-e028-4249-a6a7-c452dd671017" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_Permissions.svc?xsd=xsd1" />
+    <MetadataFile FileName="BSL_Permissions2.xsd" MetadataType="Schema" ID="2ca759d5-19aa-4feb-ad08-a7d210502cbc" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_Permissions.svc?xsd=xsd2" />
+    <MetadataFile FileName="BSL_Permissions.disco" MetadataType="Disco" ID="3a35e498-6700-46b4-aecc-da0d513bc198" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_Permissions.svc?disco" />
+    <MetadataFile FileName="BSL_Permissions.wsdl" MetadataType="Wsdl" ID="f8a5cb63-eede-473b-93a9-75f78d2df323" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_Permissions.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

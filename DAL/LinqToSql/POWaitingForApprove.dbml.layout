@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.875" name="POWaitingForApprove">
+  <DataContextMoniker Name="/POWaitingForApproveDataContext" />
+  <nestedChildShapes>
+    <classShape Id="fb3bad28-91a7-49e5-8d37-e7db522cd9f2" absoluteBounds="4.25, 3.375, 2, 6.1938297526041657">
+      <DataClassMoniker Name="/POWaitingForApproveDataContext/POWaitingForApprove" />
+      <nestedChildShapes>
+        <elementListCompartment Id="41922ee1-7ad1-49fa-b4f4-8de0e6e24bb6" absoluteBounds="4.265, 3.835, 1.9700000000000002, 5.6338297526041661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

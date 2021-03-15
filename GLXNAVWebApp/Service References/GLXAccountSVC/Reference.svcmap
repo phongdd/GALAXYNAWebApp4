@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="28cf3228-6df8-472a-8ef1-99f8127e027e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:27169/SVC/BSL_GLXAccount.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BSL_GLXAccount.disco" MetadataType="Disco" ID="3ce7fc4a-1a6a-482f-bb44-9b920ed133b6" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_GLXAccount.svc?disco" />
+    <MetadataFile FileName="BSL_GLXAccount.wsdl" MetadataType="Wsdl" ID="14eed5a9-e01d-4e05-acc0-430cdbdb8a2c" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_GLXAccount.svc?wsdl" />
+    <MetadataFile FileName="BSL_GLXAccount.xsd" MetadataType="Schema" ID="2979b0a7-30df-4a92-98c4-99cac57c04dc" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_GLXAccount.svc?xsd=xsd1" />
+    <MetadataFile FileName="BSL_GLXAccount2.xsd" MetadataType="Schema" ID="55932f61-e6c7-4308-9386-3a5eb3d0d0f0" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_GLXAccount.svc?xsd=xsd2" />
+    <MetadataFile FileName="BSL_GLXAccount1.xsd" MetadataType="Schema" ID="9333a186-bd3a-4b95-afcb-f49803d02ee0" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_GLXAccount.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

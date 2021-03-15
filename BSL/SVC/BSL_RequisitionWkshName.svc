@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="BSL.SVC.BSL_RequisitionWkshName" CodeBehind="BSL_RequisitionWkshName.svc.cs" %>

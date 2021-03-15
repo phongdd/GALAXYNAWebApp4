@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="BSL.SVC.BSL_POWaitingForApprove" CodeBehind="BSL_POWaitingForApprove.svc.cs" %>

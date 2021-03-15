@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BSL_POWaitingForApprove" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:27169/SVC/BSL_POWaitingForApprove.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:27169/SVC/BSL_POWaitingForApprove.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:27169/SVC/BSL_POWaitingForApprove.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DTO.Classes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBSL_POWaitingForApprove_GetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAll" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_GetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_CheckPermission_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPermission" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_CheckPermission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_UpdateToApprove_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToApprove" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_UpdateToApprove_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateToApproveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_Reopen_InputMessage">
+    <wsdl:part name="parameters" element="tns:Reopen" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_Reopen_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReopenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_UpdateConverted_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConverted" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_UpdateConverted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConvertedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_InsertComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertComment" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_InsertComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_TobeDeleted_InputMessage">
+    <wsdl:part name="parameters" element="tns:TobeDeleted" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_TobeDeleted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TobeDeletedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_GetRecIdFromKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecIdFromKey" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_GetRecIdFromKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecIdFromKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_UpdateData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateData" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_POWaitingForApprove_UpdateData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBSL_POWaitingForApprove">
+    <wsdl:operation name="GetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/GetAll" message="tns:IBSL_POWaitingForApprove_GetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/GetAllResponse" message="tns:IBSL_POWaitingForApprove_GetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPermission">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/CheckPermission" message="tns:IBSL_POWaitingForApprove_CheckPermission_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/CheckPermissionResponse" message="tns:IBSL_POWaitingForApprove_CheckPermission_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToApprove">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/UpdateToApprove" message="tns:IBSL_POWaitingForApprove_UpdateToApprove_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/UpdateToApproveResponse" message="tns:IBSL_POWaitingForApprove_UpdateToApprove_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Reopen">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/Reopen" message="tns:IBSL_POWaitingForApprove_Reopen_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/ReopenResponse" message="tns:IBSL_POWaitingForApprove_Reopen_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConverted">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/UpdateConverted" message="tns:IBSL_POWaitingForApprove_UpdateConverted_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/UpdateConvertedResponse" message="tns:IBSL_POWaitingForApprove_UpdateConverted_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/InsertComment" message="tns:IBSL_POWaitingForApprove_InsertComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/InsertCommentResponse" message="tns:IBSL_POWaitingForApprove_InsertComment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TobeDeleted">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/TobeDeleted" message="tns:IBSL_POWaitingForApprove_TobeDeleted_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/TobeDeletedResponse" message="tns:IBSL_POWaitingForApprove_TobeDeleted_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecIdFromKey">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/GetRecIdFromKey" message="tns:IBSL_POWaitingForApprove_GetRecIdFromKey_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/GetRecIdFromKeyResponse" message="tns:IBSL_POWaitingForApprove_GetRecIdFromKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/UpdateData" message="tns:IBSL_POWaitingForApprove_UpdateData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBSL_POWaitingForApprove/UpdateDataResponse" message="tns:IBSL_POWaitingForApprove_UpdateData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBSL_POWaitingForApprove" type="tns:IBSL_POWaitingForApprove">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAll">
+      <soap:operation soapAction="http://tempuri.org/IBSL_POWaitingForApprove/GetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPermission">
+      <soap:operation soapAction="http://tempuri.org/IBSL_POWaitingForApprove/CheckPermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateToApprove">
+      <soap:operation soapAction="http://tempuri.org/IBSL_POWaitingForApprove/UpdateToApprove" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Reopen">
+      <soap:operation soapAction="http://tempuri.org/IBSL_POWaitingForApprove/Reopen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConverted">
+      <soap:operation soapAction="http://tempuri.org/IBSL_POWaitingForApprove/UpdateConverted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertComment">
+      <soap:operation soapAction="http://tempuri.org/IBSL_POWaitingForApprove/InsertComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TobeDeleted">
+      <soap:operation soapAction="http://tempuri.org/IBSL_POWaitingForApprove/TobeDeleted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRecIdFromKey">
+      <soap:operation soapAction="http://tempuri.org/IBSL_POWaitingForApprove/GetRecIdFromKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateData">
+      <soap:operation soapAction="http://tempuri.org/IBSL_POWaitingForApprove/UpdateData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BSL_POWaitingForApprove">
+    <wsdl:port name="BasicHttpBinding_IBSL_POWaitingForApprove" binding="tns:BasicHttpBinding_IBSL_POWaitingForApprove">
+      <soap:address location="http://localhost:27169/SVC/BSL_POWaitingForApprove.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

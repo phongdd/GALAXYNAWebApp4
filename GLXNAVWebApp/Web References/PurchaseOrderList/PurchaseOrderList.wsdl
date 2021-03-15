@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/page/purchaseorderlist" targetNamespace="urn:microsoft-dynamics-schemas/page/purchaseorderlist" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/page/purchaseorderlist" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:simpleType name="Status">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Open" />
+          <xsd:enumeration value="Released" />
+          <xsd:enumeration value="Pending_Approval" />
+          <xsd:enumeration value="Pending_Prepayment" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Job_Queue_Status">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="_blank_" />
+          <xsd:enumeration value="Scheduled_for_Posting" />
+          <xsd:enumeration value="Error" />
+          <xsd:enumeration value="Posting" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="PurchaseOrderList">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Key" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Buy_from_Vendor_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Order_Address_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Buy_from_Vendor_Name" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Vendor_Authorization_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Buy_from_Post_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Buy_from_Country_Region_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Buy_from_Contact" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Pay_to_Vendor_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Pay_to_Name" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Pay_to_Post_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Pay_to_Country_Region_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Pay_to_Contact" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Ship_to_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Ship_to_Name" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Ship_to_Post_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Ship_to_Country_Region_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Ship_to_Contact" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Posting_Date" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Shortcut_Dimension_1_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Shortcut_Dimension_2_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Location_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Purchaser_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Assigned_User_ID" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Currency_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Document_Date" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Status" type="tns:Status" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Payment_Terms_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Due_Date" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Payment_Discount_Percent" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Payment_Method_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Shipment_Method_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Requested_Receipt_Date" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Job_Queue_Status" type="tns:Job_Queue_Status" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Approval_Status" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Responsibility_Center" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="PurchaseOrderList_List">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="PurchaseOrderList" type="tns:PurchaseOrderList" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="PurchaseOrderList_Fields">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="No" />
+          <xsd:enumeration value="Buy_from_Vendor_No" />
+          <xsd:enumeration value="Order_Address_Code" />
+          <xsd:enumeration value="Buy_from_Vendor_Name" />
+          <xsd:enumeration value="Vendor_Authorization_No" />
+          <xsd:enumeration value="Buy_from_Post_Code" />
+          <xsd:enumeration value="Buy_from_Country_Region_Code" />
+          <xsd:enumeration value="Buy_from_Contact" />
+          <xsd:enumeration value="Pay_to_Vendor_No" />
+          <xsd:enumeration value="Pay_to_Name" />
+          <xsd:enumeration value="Pay_to_Post_Code" />
+          <xsd:enumeration value="Pay_to_Country_Region_Code" />
+          <xsd:enumeration value="Pay_to_Contact" />
+          <xsd:enumeration value="Ship_to_Code" />
+          <xsd:enumeration value="Ship_to_Name" />
+          <xsd:enumeration value="Ship_to_Post_Code" />
+          <xsd:enumeration value="Ship_to_Country_Region_Code" />
+          <xsd:enumeration value="Ship_to_Contact" />
+          <xsd:enumeration value="Posting_Date" />
+          <xsd:enumeration value="Shortcut_Dimension_1_Code" />
+          <xsd:enumeration value="Shortcut_Dimension_2_Code" />
+          <xsd:enumeration value="Location_Code" />
+          <xsd:enumeration value="Purchaser_Code" />
+          <xsd:enumeration value="Assigned_User_ID" />
+          <xsd:enumeration value="Currency_Code" />
+          <xsd:enumeration value="Document_Date" />
+          <xsd:enumeration value="Status" />
+          <xsd:enumeration value="Payment_Terms_Code" />
+          <xsd:enumeration value="Due_Date" />
+          <xsd:enumeration value="Payment_Discount_Percent" />
+          <xsd:enumeration value="Payment_Method_Code" />
+          <xsd:enumeration value="Shipment_Method_Code" />
+          <xsd:enumeration value="Requested_Receipt_Date" />
+          <xsd:enumeration value="Job_Queue_Status" />
+          <xsd:enumeration value="Approval_Status" />
+          <xsd:enumeration value="Responsibility_Center" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="PurchaseOrderList_Filter">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="Field" type="tns:PurchaseOrderList_Fields" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="Criteria" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Read">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="No" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Read_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="PurchaseOrderList" type="tns:PurchaseOrderList" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadByRecId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="recId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadByRecId_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="PurchaseOrderList" type="tns:PurchaseOrderList" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadMultiple">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="filter" type="tns:PurchaseOrderList_Filter" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="bookmarkKey" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="setSize" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadMultiple_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="ReadMultiple_Result" type="tns:PurchaseOrderList_List" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="IsUpdated">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Key" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="IsUpdated_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="IsUpdated_Result" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRecIdFromKey">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Key" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRecIdFromKey_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="GetRecIdFromKey_Result" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="Read">
+    <part name="parameters" element="tns:Read" />
+  </message>
+  <message name="Read_Result">
+    <part name="parameters" element="tns:Read_Result" />
+  </message>
+  <message name="ReadByRecId">
+    <part name="parameters" element="tns:ReadByRecId" />
+  </message>
+  <message name="ReadByRecId_Result">
+    <part name="parameters" element="tns:ReadByRecId_Result" />
+  </message>
+  <message name="ReadMultiple">
+    <part name="parameters" element="tns:ReadMultiple" />
+  </message>
+  <message name="ReadMultiple_Result">
+    <part name="parameters" element="tns:ReadMultiple_Result" />
+  </message>
+  <message name="IsUpdated">
+    <part name="parameters" element="tns:IsUpdated" />
+  </message>
+  <message name="IsUpdated_Result">
+    <part name="parameters" element="tns:IsUpdated_Result" />
+  </message>
+  <message name="GetRecIdFromKey">
+    <part name="parameters" element="tns:GetRecIdFromKey" />
+  </message>
+  <message name="GetRecIdFromKey_Result">
+    <part name="parameters" element="tns:GetRecIdFromKey_Result" />
+  </message>
+  <portType name="PurchaseOrderList_Port">
+    <operation name="Read">
+      <input name="Read" message="tns:Read" />
+      <output name="Read_Result" message="tns:Read_Result" />
+    </operation>
+    <operation name="ReadByRecId">
+      <input name="ReadByRecId" message="tns:ReadByRecId" />
+      <output name="ReadByRecId_Result" message="tns:ReadByRecId_Result" />
+    </operation>
+    <operation name="ReadMultiple">
+      <input name="ReadMultiple" message="tns:ReadMultiple" />
+      <output name="ReadMultiple_Result" message="tns:ReadMultiple_Result" />
+    </operation>
+    <operation name="IsUpdated">
+      <input name="IsUpdated" message="tns:IsUpdated" />
+      <output name="IsUpdated_Result" message="tns:IsUpdated_Result" />
+    </operation>
+    <operation name="GetRecIdFromKey">
+      <input name="GetRecIdFromKey" message="tns:GetRecIdFromKey" />
+      <output name="GetRecIdFromKey_Result" message="tns:GetRecIdFromKey_Result" />
+    </operation>
+  </portType>
+  <binding name="PurchaseOrderList_Binding" type="tns:PurchaseOrderList_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="Read">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/purchaseorderlist:Read" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Read">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Read_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ReadByRecId">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/purchaseorderlist:ReadByRecId" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ReadByRecId">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ReadByRecId_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ReadMultiple">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/purchaseorderlist:ReadMultiple" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ReadMultiple">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ReadMultiple_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="IsUpdated">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/purchaseorderlist:IsUpdated" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="IsUpdated">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="IsUpdated_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetRecIdFromKey">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/purchaseorderlist:GetRecIdFromKey" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetRecIdFromKey">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetRecIdFromKey_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="PurchaseOrderList_Service">
+    <port name="PurchaseOrderList_Port" binding="tns:PurchaseOrderList_Binding">
+      <address location="http://lhcmmis001:7047/DynamicsNAV80/WS/API%20TC/Page/PurchaseOrderList" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

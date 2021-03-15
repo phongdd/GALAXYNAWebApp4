@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/page/itemlist" targetNamespace="urn:microsoft-dynamics-schemas/page/itemlist" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/page/itemlist" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:simpleType name="Costing_Method">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="FIFO" />
+          <xsd:enumeration value="LIFO" />
+          <xsd:enumeration value="Specific" />
+          <xsd:enumeration value="Average" />
+          <xsd:enumeration value="Standard" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Price_Profit_Calculation">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Profit_x003D_Price_Cost" />
+          <xsd:enumeration value="Price_x003D_Cost_x002B_Profit" />
+          <xsd:enumeration value="No_Relationship" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Replenishment_System">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Purchase" />
+          <xsd:enumeration value="Prod_Order" />
+          <xsd:enumeration value="Assembly" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Manufacturing_Policy">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Make_to_Stock" />
+          <xsd:enumeration value="Make_to_Order" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Flushing_Method">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Manual" />
+          <xsd:enumeration value="Forward" />
+          <xsd:enumeration value="Backward" />
+          <xsd:enumeration value="Pick__x002B__Forward" />
+          <xsd:enumeration value="Pick__x002B__Backward" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Assembly_Policy">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Assemble_to_Stock" />
+          <xsd:enumeration value="Assemble_to_Order" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="ItemList">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Key" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Search_Description" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="No_2" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Description" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Created_From_Nonstock_Item" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Substitutes_Exist" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Stockkeeping_Unit_Exists" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Assembly_BOM" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Production_BOM_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Routing_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Base_Unit_of_Measure" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Shelf_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Costing_Method" type="tns:Costing_Method" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Cost_is_Adjusted" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Standard_Cost" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Unit_Cost" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Last_Direct_Cost" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Price_Profit_Calculation" type="tns:Price_Profit_Calculation" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Profit_Percent" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Unit_Price" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Inventory_Posting_Group" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Gen_Prod_Posting_Group" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="VAT_Prod_Posting_Group" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Item_Disc_Group" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Vendor_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Vendor_Item_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Tariff_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Overhead_Rate" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Indirect_Cost_Percent" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Item_Category_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Product_Group_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Product_Family_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Product_Class_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Product_Form_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Product_Type_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Blocked" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Last_Date_Modified" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Sales_Unit_of_Measure" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Replenishment_System" type="tns:Replenishment_System" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Purch_Unit_of_Measure" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Lead_Time_Calculation" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Manufacturing_Policy" type="tns:Manufacturing_Policy" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Flushing_Method" type="tns:Flushing_Method" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Assembly_Policy" type="tns:Assembly_Policy" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Item_Tracking_Code" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ItemList_List">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="ItemList" type="tns:ItemList" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="ItemList_Fields">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="No" />
+          <xsd:enumeration value="Search_Description" />
+          <xsd:enumeration value="No_2" />
+          <xsd:enumeration value="Description" />
+          <xsd:enumeration value="Created_From_Nonstock_Item" />
+          <xsd:enumeration value="Substitutes_Exist" />
+          <xsd:enumeration value="Stockkeeping_Unit_Exists" />
+          <xsd:enumeration value="Assembly_BOM" />
+          <xsd:enumeration value="Production_BOM_No" />
+          <xsd:enumeration value="Routing_No" />
+          <xsd:enumeration value="Base_Unit_of_Measure" />
+          <xsd:enumeration value="Shelf_No" />
+          <xsd:enumeration value="Costing_Method" />
+          <xsd:enumeration value="Cost_is_Adjusted" />
+          <xsd:enumeration value="Standard_Cost" />
+          <xsd:enumeration value="Unit_Cost" />
+          <xsd:enumeration value="Last_Direct_Cost" />
+          <xsd:enumeration value="Price_Profit_Calculation" />
+          <xsd:enumeration value="Profit_Percent" />
+          <xsd:enumeration value="Unit_Price" />
+          <xsd:enumeration value="Inventory_Posting_Group" />
+          <xsd:enumeration value="Gen_Prod_Posting_Group" />
+          <xsd:enumeration value="VAT_Prod_Posting_Group" />
+          <xsd:enumeration value="Item_Disc_Group" />
+          <xsd:enumeration value="Vendor_No" />
+          <xsd:enumeration value="Vendor_Item_No" />
+          <xsd:enumeration value="Tariff_No" />
+          <xsd:enumeration value="Overhead_Rate" />
+          <xsd:enumeration value="Indirect_Cost_Percent" />
+          <xsd:enumeration value="Item_Category_Code" />
+          <xsd:enumeration value="Product_Group_Code" />
+          <xsd:enumeration value="Product_Family_Code" />
+          <xsd:enumeration value="Product_Class_Code" />
+          <xsd:enumeration value="Product_Form_Code" />
+          <xsd:enumeration value="Product_Type_Code" />
+          <xsd:enumeration value="Blocked" />
+          <xsd:enumeration value="Last_Date_Modified" />
+          <xsd:enumeration value="Sales_Unit_of_Measure" />
+          <xsd:enumeration value="Replenishment_System" />
+          <xsd:enumeration value="Purch_Unit_of_Measure" />
+          <xsd:enumeration value="Lead_Time_Calculation" />
+          <xsd:enumeration value="Manufacturing_Policy" />
+          <xsd:enumeration value="Flushing_Method" />
+          <xsd:enumeration value="Assembly_Policy" />
+          <xsd:enumeration value="Item_Tracking_Code" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="ItemList_Filter">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="Field" type="tns:ItemList_Fields" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="Criteria" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Read">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="No" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Read_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="ItemList" type="tns:ItemList" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadByRecId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="recId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadByRecId_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="ItemList" type="tns:ItemList" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadMultiple">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="filter" type="tns:ItemList_Filter" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="bookmarkKey" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="setSize" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadMultiple_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="ReadMultiple_Result" type="tns:ItemList_List" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="IsUpdated">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Key" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="IsUpdated_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="IsUpdated_Result" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRecIdFromKey">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Key" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRecIdFromKey_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="GetRecIdFromKey_Result" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="Read">
+    <part name="parameters" element="tns:Read" />
+  </message>
+  <message name="Read_Result">
+    <part name="parameters" element="tns:Read_Result" />
+  </message>
+  <message name="ReadByRecId">
+    <part name="parameters" element="tns:ReadByRecId" />
+  </message>
+  <message name="ReadByRecId_Result">
+    <part name="parameters" element="tns:ReadByRecId_Result" />
+  </message>
+  <message name="ReadMultiple">
+    <part name="parameters" element="tns:ReadMultiple" />
+  </message>
+  <message name="ReadMultiple_Result">
+    <part name="parameters" element="tns:ReadMultiple_Result" />
+  </message>
+  <message name="IsUpdated">
+    <part name="parameters" element="tns:IsUpdated" />
+  </message>
+  <message name="IsUpdated_Result">
+    <part name="parameters" element="tns:IsUpdated_Result" />
+  </message>
+  <message name="GetRecIdFromKey">
+    <part name="parameters" element="tns:GetRecIdFromKey" />
+  </message>
+  <message name="GetRecIdFromKey_Result">
+    <part name="parameters" element="tns:GetRecIdFromKey_Result" />
+  </message>
+  <portType name="ItemList_Port">
+    <operation name="Read">
+      <input name="Read" message="tns:Read" />
+      <output name="Read_Result" message="tns:Read_Result" />
+    </operation>
+    <operation name="ReadByRecId">
+      <input name="ReadByRecId" message="tns:ReadByRecId" />
+      <output name="ReadByRecId_Result" message="tns:ReadByRecId_Result" />
+    </operation>
+    <operation name="ReadMultiple">
+      <input name="ReadMultiple" message="tns:ReadMultiple" />
+      <output name="ReadMultiple_Result" message="tns:ReadMultiple_Result" />
+    </operation>
+    <operation name="IsUpdated">
+      <input name="IsUpdated" message="tns:IsUpdated" />
+      <output name="IsUpdated_Result" message="tns:IsUpdated_Result" />
+    </operation>
+    <operation name="GetRecIdFromKey">
+      <input name="GetRecIdFromKey" message="tns:GetRecIdFromKey" />
+      <output name="GetRecIdFromKey_Result" message="tns:GetRecIdFromKey_Result" />
+    </operation>
+  </portType>
+  <binding name="ItemList_Binding" type="tns:ItemList_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="Read">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/itemlist:Read" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Read">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Read_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ReadByRecId">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/itemlist:ReadByRecId" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ReadByRecId">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ReadByRecId_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ReadMultiple">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/itemlist:ReadMultiple" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ReadMultiple">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ReadMultiple_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="IsUpdated">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/itemlist:IsUpdated" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="IsUpdated">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="IsUpdated_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetRecIdFromKey">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/itemlist:GetRecIdFromKey" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetRecIdFromKey">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetRecIdFromKey_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ItemList_Service">
+    <port name="ItemList_Port" binding="tns:ItemList_Binding">
+      <address location="http://lhcmmis001:7047/DynamicsNAV80/WS/API%20TC/Page/ItemList" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

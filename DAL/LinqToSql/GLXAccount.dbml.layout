@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="GLXAccount">
+  <DataContextMoniker Name="/GLXAccountDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9a4c67da-2df7-462b-b10f-e68357bb33af" absoluteBounds="5.375, 2.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/GLXAccountDataContext/GLXAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="34d09f7a-0779-4f78-8170-4fb79ee95a78" absoluteBounds="5.39, 2.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

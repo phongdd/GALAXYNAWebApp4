@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="urn:microsoft-dynamics-schemas/page/reqworksheet" targetNamespace="urn:microsoft-dynamics-schemas/page/reqworksheet" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/page/reqworksheet" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:simpleType name="Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="_blank_" />
+          <xsd:enumeration value="G_L_Account" />
+          <xsd:enumeration value="Item" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Action_Message">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="_blank_" />
+          <xsd:enumeration value="New" />
+          <xsd:enumeration value="Change_Qty" />
+          <xsd:enumeration value="Reschedule" />
+          <xsd:enumeration value="Resched__x0026__Chg_Qty" />
+          <xsd:enumeration value="Cancel" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Ref_Order_Type">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="_blank_" />
+          <xsd:enumeration value="Purchase" />
+          <xsd:enumeration value="Prod_Order" />
+          <xsd:enumeration value="Transfer" />
+          <xsd:enumeration value="Assembly" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Replenishment_System">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Purchase" />
+          <xsd:enumeration value="Prod_Order" />
+          <xsd:enumeration value="Transfer" />
+          <xsd:enumeration value="Assembly" />
+          <xsd:enumeration value="_blank_" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="Planning_Flexibility">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Unlimited" />
+          <xsd:enumeration value="None" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="ReqWorksheet">
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="1" name="Key" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Type" type="tns:Type" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Action_Message" type="tns:Action_Message" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Accept_Action_Message" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Variant_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Description" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Description_2" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Vietnamese_Description" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Transfer_from_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Location_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Original_Quantity" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Quantity" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Unit_of_Measure_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Direct_Unit_Cost" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Currency_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Line_Discount_Percent" type="xsd:decimal" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Original_Due_Date" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Due_Date" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Order_Date" type="xsd:date" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Vendor_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Vendor_Item_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Order_Address_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Sell_to_Customer_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Ship_to_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Prod_Order_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Requester_ID" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Confirmed" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Shortcut_Dimension_1_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Shortcut_Dimension_2_Code" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ShortcutDimCode_x005B_3_x005D_" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ShortcutDimCode_x005B_4_x005D_" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ShortcutDimCode_x005B_5_x005D_" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ShortcutDimCode_x005B_6_x005D_" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ShortcutDimCode_x005B_7_x005D_" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="ShortcutDimCode_x005B_8_x005D_" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Ref_Order_No" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Ref_Order_Type" type="tns:Ref_Order_Type" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Replenishment_System" type="tns:Replenishment_System" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Ref_Line_No" type="xsd:int" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Planning_Flexibility" type="tns:Planning_Flexibility" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Blanket_Purch_Order_Exists" type="xsd:boolean" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="Description2" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="1" name="BuyFromVendorName" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ReqWorksheet_List">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="unbounded" name="ReqWorksheet" type="tns:ReqWorksheet" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:simpleType name="ReqWorksheet_Fields">
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="Type" />
+          <xsd:enumeration value="No" />
+          <xsd:enumeration value="Action_Message" />
+          <xsd:enumeration value="Accept_Action_Message" />
+          <xsd:enumeration value="Variant_Code" />
+          <xsd:enumeration value="Description" />
+          <xsd:enumeration value="Description_2" />
+          <xsd:enumeration value="Vietnamese_Description" />
+          <xsd:enumeration value="Transfer_from_Code" />
+          <xsd:enumeration value="Location_Code" />
+          <xsd:enumeration value="Original_Quantity" />
+          <xsd:enumeration value="Quantity" />
+          <xsd:enumeration value="Unit_of_Measure_Code" />
+          <xsd:enumeration value="Direct_Unit_Cost" />
+          <xsd:enumeration value="Currency_Code" />
+          <xsd:enumeration value="Line_Discount_Percent" />
+          <xsd:enumeration value="Original_Due_Date" />
+          <xsd:enumeration value="Due_Date" />
+          <xsd:enumeration value="Order_Date" />
+          <xsd:enumeration value="Vendor_No" />
+          <xsd:enumeration value="Vendor_Item_No" />
+          <xsd:enumeration value="Order_Address_Code" />
+          <xsd:enumeration value="Sell_to_Customer_No" />
+          <xsd:enumeration value="Ship_to_Code" />
+          <xsd:enumeration value="Prod_Order_No" />
+          <xsd:enumeration value="Requester_ID" />
+          <xsd:enumeration value="Confirmed" />
+          <xsd:enumeration value="Shortcut_Dimension_1_Code" />
+          <xsd:enumeration value="Shortcut_Dimension_2_Code" />
+          <xsd:enumeration value="ShortcutDimCode_x005B_3_x005D_" />
+          <xsd:enumeration value="ShortcutDimCode_x005B_4_x005D_" />
+          <xsd:enumeration value="ShortcutDimCode_x005B_5_x005D_" />
+          <xsd:enumeration value="ShortcutDimCode_x005B_6_x005D_" />
+          <xsd:enumeration value="ShortcutDimCode_x005B_7_x005D_" />
+          <xsd:enumeration value="ShortcutDimCode_x005B_8_x005D_" />
+          <xsd:enumeration value="Ref_Order_No" />
+          <xsd:enumeration value="Ref_Order_Type" />
+          <xsd:enumeration value="Replenishment_System" />
+          <xsd:enumeration value="Ref_Line_No" />
+          <xsd:enumeration value="Planning_Flexibility" />
+          <xsd:enumeration value="Blanket_Purch_Order_Exists" />
+          <xsd:enumeration value="Description2" />
+          <xsd:enumeration value="BuyFromVendorName" />
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:complexType name="ReqWorksheet_Filter">
+        <xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" name="Field" type="tns:ReqWorksheet_Fields" />
+          <xsd:element minOccurs="1" maxOccurs="1" name="Criteria" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ReadByRecId">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="CurrentJnlBatchName" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="recId" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadByRecId_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="ReqWorksheet" type="tns:ReqWorksheet" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadMultiple">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="CurrentJnlBatchName" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="unbounded" name="filter" type="tns:ReqWorksheet_Filter" />
+            <xsd:element minOccurs="0" maxOccurs="1" name="bookmarkKey" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="setSize" type="xsd:int" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReadMultiple_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" maxOccurs="1" name="ReadMultiple_Result" type="tns:ReqWorksheet_List" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="IsUpdated">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Key" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="IsUpdated_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="IsUpdated_Result" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRecIdFromKey">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Key" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetRecIdFromKey_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="GetRecIdFromKey_Result" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Create">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="CurrentJnlBatchName" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ReqWorksheet" type="tns:ReqWorksheet" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Create_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="ReqWorksheet" type="tns:ReqWorksheet" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CreateMultiple">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="CurrentJnlBatchName" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ReqWorksheet_List" type="tns:ReqWorksheet_List" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CreateMultiple_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="ReqWorksheet_List" type="tns:ReqWorksheet_List" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Update">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="CurrentJnlBatchName" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ReqWorksheet" type="tns:ReqWorksheet" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Update_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="ReqWorksheet" type="tns:ReqWorksheet" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateMultiple">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="CurrentJnlBatchName" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="ReqWorksheet_List" type="tns:ReqWorksheet_List" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="UpdateMultiple_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="ReqWorksheet_List" type="tns:ReqWorksheet_List" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Delete">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="CurrentJnlBatchName" type="xsd:string" />
+            <xsd:element minOccurs="1" maxOccurs="1" name="Key" type="xsd:string" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="Delete_Result">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Delete_Result" type="xsd:boolean" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="ReadByRecId">
+    <part name="parameters" element="tns:ReadByRecId" />
+  </message>
+  <message name="ReadByRecId_Result">
+    <part name="parameters" element="tns:ReadByRecId_Result" />
+  </message>
+  <message name="ReadMultiple">
+    <part name="parameters" element="tns:ReadMultiple" />
+  </message>
+  <message name="ReadMultiple_Result">
+    <part name="parameters" element="tns:ReadMultiple_Result" />
+  </message>
+  <message name="IsUpdated">
+    <part name="parameters" element="tns:IsUpdated" />
+  </message>
+  <message name="IsUpdated_Result">
+    <part name="parameters" element="tns:IsUpdated_Result" />
+  </message>
+  <message name="GetRecIdFromKey">
+    <part name="parameters" element="tns:GetRecIdFromKey" />
+  </message>
+  <message name="GetRecIdFromKey_Result">
+    <part name="parameters" element="tns:GetRecIdFromKey_Result" />
+  </message>
+  <message name="Create">
+    <part name="parameters" element="tns:Create" />
+  </message>
+  <message name="Create_Result">
+    <part name="parameters" element="tns:Create_Result" />
+  </message>
+  <message name="CreateMultiple">
+    <part name="parameters" element="tns:CreateMultiple" />
+  </message>
+  <message name="CreateMultiple_Result">
+    <part name="parameters" element="tns:CreateMultiple_Result" />
+  </message>
+  <message name="Update">
+    <part name="parameters" element="tns:Update" />
+  </message>
+  <message name="Update_Result">
+    <part name="parameters" element="tns:Update_Result" />
+  </message>
+  <message name="UpdateMultiple">
+    <part name="parameters" element="tns:UpdateMultiple" />
+  </message>
+  <message name="UpdateMultiple_Result">
+    <part name="parameters" element="tns:UpdateMultiple_Result" />
+  </message>
+  <message name="Delete">
+    <part name="parameters" element="tns:Delete" />
+  </message>
+  <message name="Delete_Result">
+    <part name="parameters" element="tns:Delete_Result" />
+  </message>
+  <portType name="ReqWorksheet_Port">
+    <operation name="ReadByRecId">
+      <input name="ReadByRecId" message="tns:ReadByRecId" />
+      <output name="ReadByRecId_Result" message="tns:ReadByRecId_Result" />
+    </operation>
+    <operation name="ReadMultiple">
+      <input name="ReadMultiple" message="tns:ReadMultiple" />
+      <output name="ReadMultiple_Result" message="tns:ReadMultiple_Result" />
+    </operation>
+    <operation name="IsUpdated">
+      <input name="IsUpdated" message="tns:IsUpdated" />
+      <output name="IsUpdated_Result" message="tns:IsUpdated_Result" />
+    </operation>
+    <operation name="GetRecIdFromKey">
+      <input name="GetRecIdFromKey" message="tns:GetRecIdFromKey" />
+      <output name="GetRecIdFromKey_Result" message="tns:GetRecIdFromKey_Result" />
+    </operation>
+    <operation name="Create">
+      <input name="Create" message="tns:Create" />
+      <output name="Create_Result" message="tns:Create_Result" />
+    </operation>
+    <operation name="CreateMultiple">
+      <input name="CreateMultiple" message="tns:CreateMultiple" />
+      <output name="CreateMultiple_Result" message="tns:CreateMultiple_Result" />
+    </operation>
+    <operation name="Update">
+      <input name="Update" message="tns:Update" />
+      <output name="Update_Result" message="tns:Update_Result" />
+    </operation>
+    <operation name="UpdateMultiple">
+      <input name="UpdateMultiple" message="tns:UpdateMultiple" />
+      <output name="UpdateMultiple_Result" message="tns:UpdateMultiple_Result" />
+    </operation>
+    <operation name="Delete">
+      <input name="Delete" message="tns:Delete" />
+      <output name="Delete_Result" message="tns:Delete_Result" />
+    </operation>
+  </portType>
+  <binding name="ReqWorksheet_Binding" type="tns:ReqWorksheet_Port">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <operation name="ReadByRecId">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/reqworksheet:ReadByRecId" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ReadByRecId">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ReadByRecId_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="ReadMultiple">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/reqworksheet:ReadMultiple" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="ReadMultiple">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="ReadMultiple_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="IsUpdated">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/reqworksheet:IsUpdated" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="IsUpdated">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="IsUpdated_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="GetRecIdFromKey">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/reqworksheet:GetRecIdFromKey" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="GetRecIdFromKey">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="GetRecIdFromKey_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Create">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/reqworksheet:Create" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Create">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Create_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="CreateMultiple">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/reqworksheet:CreateMultiple" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="CreateMultiple">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="CreateMultiple_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Update">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/reqworksheet:Update" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Update">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Update_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="UpdateMultiple">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/reqworksheet:UpdateMultiple" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="UpdateMultiple">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="UpdateMultiple_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+    <operation name="Delete">
+      <operation soapAction="urn:microsoft-dynamics-schemas/page/reqworksheet:Delete" style="document" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <input name="Delete">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </input>
+      <output name="Delete_Result">
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </output>
+    </operation>
+  </binding>
+  <service name="ReqWorksheet_Service">
+    <port name="ReqWorksheet_Port" binding="tns:ReqWorksheet_Binding">
+      <address location="http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT/Page/ReqWorksheet" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </port>
+  </service>
+</definitions>

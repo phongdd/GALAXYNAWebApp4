@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="BSL_Permissions" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:27169/SVC/BSL_Permissions.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:27169/SVC/BSL_Permissions.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:27169/SVC/BSL_Permissions.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DTO.Classes" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IBSL_Permissions_GetPermissionByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPermissionByUser" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_Permissions_GetPermissionByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPermissionByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_Permissions_CopyPermission_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyPermission" />
+  </wsdl:message>
+  <wsdl:message name="IBSL_Permissions_CopyPermission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyPermissionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IBSL_Permissions">
+    <wsdl:operation name="GetPermissionByUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBSL_Permissions/GetPermissionByUser" message="tns:IBSL_Permissions_GetPermissionByUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBSL_Permissions/GetPermissionByUserResponse" message="tns:IBSL_Permissions_GetPermissionByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyPermission">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBSL_Permissions/CopyPermission" message="tns:IBSL_Permissions_CopyPermission_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBSL_Permissions/CopyPermissionResponse" message="tns:IBSL_Permissions_CopyPermission_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IBSL_Permissions" type="tns:IBSL_Permissions">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPermissionByUser">
+      <soap:operation soapAction="http://tempuri.org/IBSL_Permissions/GetPermissionByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CopyPermission">
+      <soap:operation soapAction="http://tempuri.org/IBSL_Permissions/CopyPermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BSL_Permissions">
+    <wsdl:port name="BasicHttpBinding_IBSL_Permissions" binding="tns:BasicHttpBinding_IBSL_Permissions">
+      <soap:address location="http://localhost:27169/SVC/BSL_Permissions.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

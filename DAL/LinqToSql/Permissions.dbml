@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="GLXNAVWebApp_TEST" Class="PermissionsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.10.116.35;Initial Catalog=GLXNAVWebApp_TEST;User ID=sa" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="GLXNAVWebApp_TESTConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Permissions" Member="Permissions">
+    <Type Name="Permission">
+      <Column Name="UID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Company" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Page" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Action" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Allow" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

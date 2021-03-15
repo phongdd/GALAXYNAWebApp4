@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5899a86f-bf7f-42bc-b884-201630600982" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:27169/SVC/BSL_RequisitionWkshName.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="BSL_RequisitionWkshName.disco" MetadataType="Disco" ID="77836d82-31a8-4dda-92d6-d2c0c25af0d7" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_RequisitionWkshName.svc?disco" />
+    <MetadataFile FileName="BSL_RequisitionWkshName.xsd" MetadataType="Schema" ID="5f50c5c5-3d07-480d-9c5d-1a3ea0202893" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_RequisitionWkshName.svc?xsd=xsd0" />
+    <MetadataFile FileName="BSL_RequisitionWkshName.wsdl" MetadataType="Wsdl" ID="3e61ed29-014a-4796-8f53-7704cd1e4587" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_RequisitionWkshName.svc?wsdl" />
+    <MetadataFile FileName="BSL_RequisitionWkshName1.xsd" MetadataType="Schema" ID="2f39da18-dbc4-4c85-bf15-efd529b712c1" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_RequisitionWkshName.svc?xsd=xsd2" />
+    <MetadataFile FileName="BSL_RequisitionWkshName2.xsd" MetadataType="Schema" ID="80fd0186-80f3-4e13-8759-e36e14e69475" SourceId="1" SourceUrl="http://localhost:27169/SVC/BSL_RequisitionWkshName.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

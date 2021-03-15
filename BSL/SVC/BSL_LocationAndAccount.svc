@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="BSL.SVC.BSL_LocationAndAccount" CodeBehind="BSL_LocationAndAccount.svc.cs" %>

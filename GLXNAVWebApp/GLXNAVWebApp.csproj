@@ -1,0 +1,848 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5BB08D30-9290-40E0-8DE1-40AA8A351C3C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GLXNAVWebApp</RootNamespace>
+    <AssemblyName>GLXNAVWebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ext.Net, Version=2.5.2.10712, Culture=neutral, PublicKeyToken=2e12ce3d0176cd87, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ext.NET.2.5.2\lib\net451\Ext.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ext.Net.Utilities, Version=2.4.0.0, Culture=neutral, PublicKeyToken=2c34ac34702a3c23, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ext.NET.Utilities.2.4.0\lib\Ext.Net.Utilities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Transformer.NET, Version=2.1.1.22883, Culture=neutral, PublicKeyToken=e274d618e7c603a7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Transformer.NET.2.1.1\lib\net35\Transformer.NET.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0.3\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ext.NET.Default.aspx" />
+    <Content Include="Forms\DataReview\DataReview.js" />
+    <Content Include="Forms\DataReview\Default.aspx" />
+    <Content Include="Forms\Permission\Default.aspx" />
+    <Content Include="Forms\Permission\Permission.js" />
+    <Content Include="Forms\PurchaseOrder\Default.aspx" />
+    <Content Include="Forms\PurchaseOrder\PO.js" />
+    <Content Include="Forms\PurchaseOrder\Preview.aspx" />
+    <Content Include="Forms\PurchaseOrder\SvcPurchaseOrder.asmx" />
+    <Content Include="Forms\ReqWorksheet2\Default.aspx" />
+    <Content Include="Forms\ReqWorksheet2\ReqWorksheet2.js" />
+    <Content Include="Forms\ReqWorksheet\ReqWorksheet.js" />
+    <Content Include="Forms\ReqWorksheet\SvcReqWorksheet.asmx" />
+    <Content Include="Forms\Template\Csv.xsl" />
+    <Content Include="Forms\Template\Excel.xsl" />
+    <Content Include="Global.asax" />
+    <Content Include="Lookup\LkpDimensionValueList.aspx" />
+    <Content Include="Lookup\Lkp_Items.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Handler\ItemListHandler.ashx" />
+    <Content Include="Handler\LocationListHandler.ashx" />
+    <Content Include="Handler\ItemVendorCatalogHandler.ashx" />
+    <Content Include="Handler\UOMHandler.ashx" />
+    <None Include="Properties\PublishProfiles\GLXNAVWebAppPublish.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Resources\CSS\Login.css" />
+    <Content Include="Resources\extnet-logo-small.png" />
+    <Content Include="Resources\JS\index.js" />
+    <Content Include="Resources\JS\jquery-3.2.1.min.js" />
+    <None Include="Service References\GLXAccountSVC\BSL_GLXAccount.disco" />
+    <None Include="Service References\GLXAccountSVC\BSL_GLXAccount2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GLXAccountSVC\configuration91.svcinfo" />
+    <None Include="Service References\GLXAccountSVC\configuration.svcinfo" />
+    <Content Include="Service References\GLXAccountSVC\GLXNAVWebApp.GLXAccountSVC.data_GLXAccount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GLXAccountSVC\GLXNAVWebApp.GLXAccountSVC.data_Account.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\GLXAccountSVC\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\GLXRequisitionWkshName\BSL_RequisitionWkshName.disco" />
+    <None Include="Service References\GLXRequisitionWkshName\configuration91.svcinfo" />
+    <None Include="Service References\GLXRequisitionWkshName\configuration.svcinfo" />
+    <Content Include="Service References\GLXRequisitionWkshName\GLXNAVWebApp.GLXRequisitionWkshName.data_RequisitionWkshName.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\GLXRequisitionWkshName\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Permissions\BSL_Permissions.wsdl" />
+    <None Include="Service References\Permissions\BSL_Permissions.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Permissions\BSL_Permissions1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\Permissions\BSL_Permissions2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\Permissions\GLXNAVWebApp.Permissions.data_Permissions.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\POWaitingForApprove\configuration91.svcinfo" />
+    <None Include="Service References\POWaitingForApprove\configuration.svcinfo" />
+    <None Include="Service References\Permissions\BSL_Permissions.disco" />
+    <None Include="Service References\Permissions\configuration91.svcinfo" />
+    <None Include="Service References\Permissions\configuration.svcinfo" />
+    <None Include="Service References\Permissions\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\POWaitingForApprove\GLXNAVWebApp.POWaitingForApprove.data_POWaitingForApprove.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\POWaitingForApprove\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="login.aspx" />
+    <None Include="Service References\RBSL_LocationAndAccount\BSL_LocationAndAccount.disco" />
+    <None Include="Service References\RBSL_LocationAndAccount\configuration91.svcinfo" />
+    <None Include="Service References\RBSL_LocationAndAccount\configuration.svcinfo" />
+    <Content Include="Service References\RBSL_LocationAndAccount\GLXNAVWebApp.RBSL_LocationAndAccount.data_LocationAndAccount.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\RBSL_LocationAndAccount\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Data\Batchs.xml" />
+    <Content Include="Data\Locations.xml" />
+    <Content Include="Web References\ItemList\ItemList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\Companies\Companies.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Service References\GLXAccountSVC\BSL_GLXAccount.wsdl" />
+    <None Include="Service References\GLXAccountSVC\BSL_GLXAccount.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GLXAccountSVC\BSL_GLXAccount1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GLXRequisitionWkshName\BSL_RequisitionWkshName.wsdl" />
+    <None Include="Service References\GLXRequisitionWkshName\BSL_RequisitionWkshName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GLXRequisitionWkshName\BSL_RequisitionWkshName1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GLXRequisitionWkshName\BSL_RequisitionWkshName2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\POWaitingForApprove\BSL_POWaitingForApprove.wsdl" />
+    <None Include="Service References\POWaitingForApprove\BSL_POWaitingForApprove.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\POWaitingForApprove\BSL_POWaitingForApprove1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\POWaitingForApprove\BSL_POWaitingForApprove2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RBSL_LocationAndAccount\BSL_LocationAndAccount.wsdl" />
+    <None Include="Service References\RBSL_LocationAndAccount\BSL_LocationAndAccount.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RBSL_LocationAndAccount\BSL_LocationAndAccount1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RBSL_LocationAndAccount\BSL_LocationAndAccount2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\Companies\Companies.wsdl" />
+    <Content Include="Web References\Companies\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\GLXWebService\GLXWebService.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\DimensionValueList\DimensionValueList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\DataReviewWorksheet\DataReviewWorksheet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\DataReviewWorksheet\DataReviewWorksheet.wsdl" />
+    <Content Include="Web References\DataReviewWorksheet\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\DimensionValueList\DimensionValueList.wsdl" />
+    <Content Include="Web References\DimensionValueList\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\GLXWebService\GLXWebService.wsdl" />
+    <Content Include="Web References\GLXWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\ItemList\ItemList.wsdl" />
+    <Content Include="Web References\ItemList\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\LocationList\LocationList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\ItemUnitsofMeasure\ItemUnitsofMeasure.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\ItemUnitsofMeasure\ItemUnitsofMeasure.wsdl" />
+    <Content Include="Web References\ItemUnitsofMeasure\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\Item_Reclass_Journal\Item_Reclass_Journal.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\ItemVendorCatalog\ItemVendorCatalog.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\ItemVendorCatalog\ItemVendorCatalog.wsdl" />
+    <Content Include="Web References\ItemVendorCatalog\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\Item_Reclass_Journal\Item_Reclass_Journal.wsdl" />
+    <Content Include="Web References\Item_Reclass_Journal\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <None Include="Web References\LocationList\LocationList.wsdl" />
+    <Content Include="Web References\LocationList\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\PurchaseOrder\PurchaseOrder.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\PurchaseOrder\PurchaseOrder.wsdl" />
+    <None Include="Web References\PurchaseOrder\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\PurchaseOrder_CU\PurchaseOrder.wsdl" />
+    <None Include="Web References\PurchaseOrder_CU\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ReqWkshNames\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\ReqWkshNames\ReqWkshNames.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\PurchaseOrderList\PurchaseOrderList.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\PurchaseOrderList\PurchaseOrderList.wsdl" />
+    <None Include="Web References\PurchaseOrderList\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ReqWkshNames\ReqWkshNames.wsdl" />
+    <None Include="Web References\ReqWorksheet\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web References\ReqWorksheet\ReqWorksheet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\ReqWorksheet\ReqWorksheet.wsdl" />
+    <Content Include="Web References\ReqWorksheet_svc\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\ReqWorksheet_svc\ReqWorksheet.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <None Include="Web References\ReqWorksheet_svc\ReqWorksheet.wsdl" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Forms\ReqWorksheet\Default.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\ComboBoxLookup.cs" />
+    <Compile Include="Classes\Common.cs" />
+    <Compile Include="Classes\GlobalVariable.cs" />
+    <Compile Include="Classes\GridPanelEditBase.cs" />
+    <Compile Include="Classes\LookupFormatData.cs" />
+    <Compile Include="Classes\Utilities.cs" />
+    <Compile Include="Forms\DataReview\DataReview.cs" />
+    <Compile Include="Forms\DataReview\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DataReview\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Permission\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Permission\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Permission\Permission.cs" />
+    <Compile Include="Forms\PurchaseOrder\CtlPO.cs" />
+    <Compile Include="Forms\PurchaseOrder\CtlPOEdit.cs" />
+    <Compile Include="Forms\PurchaseOrder\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PurchaseOrder\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PurchaseOrder\Preview.aspx.cs">
+      <DependentUpon>Preview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PurchaseOrder\Preview.aspx.designer.cs">
+      <DependentUpon>Preview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PurchaseOrder\SvcPurchaseOrder.asmx.cs">
+      <DependentUpon>SvcPurchaseOrder.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\ReqWorksheet2\CtlReqWorksheet2.cs" />
+    <Compile Include="Forms\ReqWorksheet2\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ReqWorksheet2\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReqWorksheet\CtlReqWorksheet.cs" />
+    <Compile Include="Forms\ReqWorksheet\CtlReqWorksheetEdit.cs" />
+    <Compile Include="Forms\ReqWorksheet\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ReqWorksheet\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReqWorksheet\SvcReqWorksheet.asmx.cs">
+      <DependentUpon>SvcReqWorksheet.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\ItemListHandler.ashx.cs">
+      <DependentUpon>ItemListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\ItemVendorCatalogHandler.ashx.cs">
+      <DependentUpon>ItemVendorCatalogHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\LocationListHandler.ashx.cs">
+      <DependentUpon>LocationListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\UOMHandler.ashx.cs">
+      <DependentUpon>UOMHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup\LkpDimensionValueList.aspx.cs">
+      <DependentUpon>LkpDimensionValueList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lookup\LkpDimensionValueList.aspx.designer.cs">
+      <DependentUpon>LkpDimensionValueList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Lookup\Lkp_Items.aspx.cs">
+      <DependentUpon>Lkp_Items.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Lookup\Lkp_Items.aspx.designer.cs">
+      <DependentUpon>Lkp_Items.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GLXAccountSVC\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GLXRequisitionWkshName\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\Permissions\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\POWaitingForApprove\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\RBSL_LocationAndAccount\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Companies\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\DataReviewWorksheet\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\DimensionValueList\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GLXWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ItemList\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ItemUnitsofMeasure\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ItemVendorCatalog\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Item_Reclass_Journal\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\LocationList\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PurchaseOrderList\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PurchaseOrder\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PurchaseOrder_CU\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ReqWkshNames\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ReqWorksheet\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ReqWorksheet_svc\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT/Page/PurchaseOrder">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PurchaseOrder\</RelPath>
+      <UpdateFromURL>http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT/Page/PurchaseOrder</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GLXNAVWebApp_PurchaseOrder_PurchaseOrder_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT/Page/ReqWorksheet">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ReqWorksheet\</RelPath>
+      <UpdateFromURL>http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT/Page/ReqWorksheet</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GLXNAVWebApp_ReqWorksheet_ReqWorksheet_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT_COPY/Codeunit/PurchaseOrder">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PurchaseOrder_CU\</RelPath>
+      <UpdateFromURL>http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT_COPY/Codeunit/PurchaseOrder</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GLXNAVWebApp_PurchaseOrder_CU_PurchaseOrder</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT_COPY/Page/DimensionValueList">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DimensionValueList\</RelPath>
+      <UpdateFromURL>http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT_COPY/Page/DimensionValueList</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GLXNAVWebApp_DimensionValueList_DimensionValueList_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT_COPY/Page/GLXWebService">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GLXWebService\</RelPath>
+      <UpdateFromURL>http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT_COPY/Page/GLXWebService</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GLXNAVWebApp_GLXWebService_GLXWebService_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT_COPY/Page/ItemVendorCatalog">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ItemVendorCatalog\</RelPath>
+      <UpdateFromURL>http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT_COPY/Page/ItemVendorCatalog</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GLXNAVWebApp_ItemVendorCatalog_ItemVendorCatalog_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT_COPY/Page/ReqWorksheet">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ReqWorksheet_svc\</RelPath>
+      <UpdateFromURL>http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT_COPY/Page/ReqWorksheet</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GLXNAVWebApp_ReqWorksheet_svc_ReqWorksheet_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT_TEST/Page/DataReviewWorksheet">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DataReviewWorksheet\</RelPath>
+      <UpdateFromURL>http://10.10.116.33:9047/GALAXYNAV/WS/GALAXY_BMT_TEST/Page/DataReviewWorksheet</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GLXNAVWebApp_DataReviewWorksheet_DataReviewWorksheet_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://glxpwnav01.galaxy.local.vn:9047/GALAXYNAV/WS/GALAXY_BMT_COPY/Page/Item_Reclass_Journal">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Item_Reclass_Journal\</RelPath>
+      <UpdateFromURL>http://glxpwnav01.galaxy.local.vn:9047/GALAXYNAV/WS/GALAXY_BMT_COPY/Page/Item_Reclass_Journal</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GLXNAVWebApp_Item_Reclass_Journal_Item_Reclass_Journal_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://lhcmmis001:7047/DynamicsNAV80/WS/API%2520TC/Page/Companies">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Companies\</RelPath>
+      <UpdateFromURL>http://lhcmmis001:7047/DynamicsNAV80/WS/API%2520TC/Page/Companies</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GLXNAVWebApp_Companies_Companies_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://lhcmmis001:7047/DynamicsNAV80/WS/API%2520TC/Page/ItemList">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ItemList\</RelPath>
+      <UpdateFromURL>http://lhcmmis001:7047/DynamicsNAV80/WS/API%2520TC/Page/ItemList</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GLXNAVWebApp_ItemList_ItemList_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://lhcmmis001:7047/DynamicsNAV80/WS/API%2520TC/Page/ItemUnitsofMeasure">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ItemUnitsofMeasure\</RelPath>
+      <UpdateFromURL>http://lhcmmis001:7047/DynamicsNAV80/WS/API%2520TC/Page/ItemUnitsofMeasure</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GLXNAVWebApp_ItemUnitsofMeasure_ItemUnitsofMeasure_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://lhcmmis001:7047/DynamicsNAV80/WS/API%2520TC/Page/LocationList">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\LocationList\</RelPath>
+      <UpdateFromURL>http://lhcmmis001:7047/DynamicsNAV80/WS/API%2520TC/Page/LocationList</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GLXNAVWebApp_LocationList_LocationList_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://lhcmmis001:7047/DynamicsNAV80/WS/API%2520TC/Page/PurchaseOrderList">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PurchaseOrderList\</RelPath>
+      <UpdateFromURL>http://lhcmmis001:7047/DynamicsNAV80/WS/API%2520TC/Page/PurchaseOrderList</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GLXNAVWebApp_PurchaseOrderList_PurchaseOrderList_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://lhcmmis001:7047/DynamicsNAV80/WS/API%2520TC/Page/ReqWkshNames">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ReqWkshNames\</RelPath>
+      <UpdateFromURL>http://lhcmmis001:7047/DynamicsNAV80/WS/API%2520TC/Page/ReqWkshNames</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>GLXNAVWebApp_ReqWkshNames_ReqWkshNames_Service</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\GLXAccountSVC\" />
+    <WCFMetadataStorage Include="Service References\GLXRequisitionWkshName\" />
+    <WCFMetadataStorage Include="Service References\Permissions\" />
+    <WCFMetadataStorage Include="Service References\POWaitingForApprove\" />
+    <WCFMetadataStorage Include="Service References\RBSL_LocationAndAccount\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="Forms\PurchaseOrder\RptPO.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>15257</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:15257/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
